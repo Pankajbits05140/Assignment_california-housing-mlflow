@@ -32,3 +32,4 @@ for model_name, model in models.items():
         mlflow.sklearn.log_model(model, "model")
 
         print(f"{model_name} MSE: {mse:.4f}")
+        mlflow.sklearn.save_model(model, "model/best_model")

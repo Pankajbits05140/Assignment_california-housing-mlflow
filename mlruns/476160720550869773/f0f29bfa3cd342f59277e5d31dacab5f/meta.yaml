@@ -1,0 +1,14 @@
+artifact_uri: file:///D:/Study/BITS/3rd%20Sem/MLOPS/Assignment/Assignment_california-housing-mlflow/mlruns/476160720550869773/f0f29bfa3cd342f59277e5d31dacab5f/artifacts
+end_time: 1754462530321
+entry_point_name: ''
+experiment_id: '476160720550869773'
+lifecycle_stage: active
+run_id: f0f29bfa3cd342f59277e5d31dacab5f
+run_name: DecisionTree
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754462526193
+status: 4
+tags: []
+user_id: PANKAJ

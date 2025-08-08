@@ -1,0 +1,14 @@
+artifact_uri: file:///D:/Study/BITS/3rd%20Sem/MLOPS/Assignment/Assignment_california-housing-mlflow/mlruns/476160720550869773/83c91d2454fd45e382334d3c303b4bc1/artifacts
+end_time: 1754462526193
+entry_point_name: ''
+experiment_id: '476160720550869773'
+lifecycle_stage: active
+run_id: 83c91d2454fd45e382334d3c303b4bc1
+run_name: LinearRegression
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754462517402
+status: 3
+tags: []
+user_id: PANKAJ

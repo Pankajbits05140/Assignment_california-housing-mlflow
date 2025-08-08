@@ -1,0 +1,39 @@
+name: CI/CD Local Deployment
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build-push-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout code
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # 2. Lint code
+      - name: Lint Python code
+        run: |
+          pip install flake8
+          flake8 .
+
+      # 3. Log in to Docker Hub
+      - name: Docker Login
+        run: echo "${{ secrets.DOCKER_ACCESS_TOKEN }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+
+      # 4. Build Docker image
+      - name: Build Docker image
+        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/ml-api:latest .
+
+      # 5. Push Docker image
+      - name: Push Docker image
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/ml-api:latest
+
+      # 6. Pull and run container locally (simulate deployment)
+      - name: Deploy locally
+        run: |
+          docker pull ${{ secrets.DOCKER_USERNAME }}/ml-api:latest
+          docker run -d -p 5000:5000 --name ml-api ${{ secrets.DOCKER_USERNAME }}/ml-api:latest
+          docker ps

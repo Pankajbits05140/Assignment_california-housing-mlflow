@@ -1,0 +1,10 @@
+artifact_location: file:///D:/Study/BITS/3rd%20Sem/MLOPS/Assignment/Assignment_california-housing-mlflow/mlruns/476160720550869773/models/m-84aebdfc635c489e80268780df8a813a/artifacts
+creation_timestamp: 1754462517538
+experiment_id: '476160720550869773'
+last_updated_timestamp: 1754462522427
+model_id: m-84aebdfc635c489e80268780df8a813a
+model_type: null
+name: model
+source_run_id: 83c91d2454fd45e382334d3c303b4bc1
+status: 2
+status_message: null
