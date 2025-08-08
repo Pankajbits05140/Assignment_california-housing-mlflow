@@ -36,4 +36,7 @@ jobs:
         run: |
           docker pull ${{ secrets.DOCKER_USERNAME }}/ml-api:latest
           docker run -d -p 5000:5000 --name ml-api ${{ secrets.DOCKER_USERNAME }}/ml-api:latest
-          docker ps
+           docker ps
+    # 7. Push Docker image
+      - name: Lint Python code
+        run: pip install flake8 && flake8 .
