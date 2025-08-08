@@ -15,9 +15,9 @@ jobs:
 
       # 2. Lint code
       - name: Lint Python code
-        run: |
-          pip install flake8
-          flake8 .
+        run: pip install flake8 && flake8 .
+          
+          
 
       # 3. Log in to Docker Hub
       - name: Docker Login
@@ -37,6 +37,4 @@ jobs:
           docker pull ${{ secrets.DOCKER_USERNAME }}/ml-api:latest
           docker run -d -p 5000:5000 --name ml-api ${{ secrets.DOCKER_USERNAME }}/ml-api:latest
            docker ps
-    # 7. Push Docker image
-      - name: Lint Python code
-        run: pip install flake8 && flake8 .
+  
