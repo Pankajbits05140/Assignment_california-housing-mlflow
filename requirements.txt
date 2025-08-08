@@ -1,9 +1,8 @@
 
-numpy
-mlflow
 flask
-flask_cors
-scikit-learn
+flask-cors
 pandas
-pytest 
-flake8
+mlflow
+scikit-learn
+pydantic
+prometheus_client
